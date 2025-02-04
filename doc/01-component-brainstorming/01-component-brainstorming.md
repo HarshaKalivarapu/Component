@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Harsha Kalivarapu
+- **Dot Number**: kalivarapu.2
+- **Due Date**: 2/4/2025, 1:50PM
 
 ## Assignment Overview
 
@@ -200,68 +200,103 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Graph
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A data structure consisting of nodes (vertices) connected by edges. It can be directed or undirected, weighted or unweighted (possibly).
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addVertex(T v): Adds a vertex to the graph
+    - void addEdge(T v1, T v2): Adds an edge between two vertices.
+    - void removeVertex(T v): Removes a vertex and its associated edges.
+    - void removeEdge(T v1, T v2): Removes an edge between two vertices.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - boolean containsVertex(T v): Checks if a vertex exists.
+    - boolean containsEdge(T v1, T v2): Checks if an edge exists.
+    - int size(): Returns the number of vertices.
+    - int edgeCount(): Returns the number of edges.
+    - Sequence<T> neighbors(T v): Returns a list of adjacent vertices.
+    - boolean isConnected(T v1, T v2): Checks if two vertices are connected.
+    - List<T> shortestPath(T start, T end): Finds the shortest path (could use BFS/Dijkstra’s algorithm).
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, since vertices and edges can be dynamically added or removed.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Maybe for an Edge class if the graph is weighted.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Maybe an EdgeType enum (DIRECTED/UNDIRECTED) to differentiate graph types (if we get that far)
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. containsVertex(v) can be implemented by checking if v exists in the underlying data structure.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: RegExpMatcher
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Provides a way to match and manipulate strings using regular expressions. It allows efficient pattern matching, searching, and replacement operations
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void setPattern(String regex): Sets the regular expression pattern for matching.
+    - boolean matches(String input): Returns true if the entire input matches the regex pattern.
+    - boolean find(String input): Returns true if the regex pattern is found anywhere in the input.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - Sequence<String> findAll(String input): Returns all substrings in the input that match the regex.
+    - String replaceAll(String input, String replacement): Replaces all matches in the input with the given replacement string.
+    - String replaceFirst(String input, String replacement): Replaces only the first match in the input.
+    - boolean containsMatch(String input): Returns true if there is at least one match (equivalent to find).
+    - int countMatches(String input): Returns the number of matches found in the input.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because the pattern can be set and changed dynamically using setPattern().
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Most likely not required
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. countMatches(input) can repeatedly call find(input) until no more matches are found.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: TaskManager
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A component for managing tasks, supporting creation, updating, deletion, and prioritization. Tasks can have due dates, priorities, and completion status.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addTask(String taskName, int priority, String dueDate): Adds a task with a given name, priority (higher number = higher priority), and due date.
+
+    - void removeTask(String taskName): Removes a task by name if it exists.
+
+    - boolean isTaskComplete(String taskName): Checks if a task is marked as complete.
+
+    - void markTaskComplete(String taskName): Marks a task as complete.
+
+    - String nextTask(): Returns the highest-priority incomplete task (earliest due date as a tiebreaker).
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - boolean hasTask(String taskName): Checks if a task exists in the system.
+
+    - void changeTaskPriority(String taskName, int newPriority): Updates the priority of an existing task.
+
+    - void rescheduleTask(String taskName, String newDueDate): Changes the due date of an existing task.
+
+    - Sequence<String> listTasksByPriority(): Returns all tasks sorted by priority and due date.
+
+    - Sequence<String> listCompletedTasks(): Returns all completed tasks.
+
+    - Sqequence<String> listIncompleteTasks(): Returns all incomplete tasks.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. Tasks are added, removed, and updated dynamically.
+
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, an internal Task class would likely be needed to store task details (name, priority, due date, completion status).
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Maybe, to define priority levels (HIGH, MEDIUM, LOW) or task status (PENDING, COMPLETE).
+
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. listCompletedTasks() can be derived by iterating over tasks and checking isTaskComplete(taskName).
 
 ## Post-Assignment
 
