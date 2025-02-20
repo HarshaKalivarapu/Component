@@ -1,8 +1,8 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Harsha Kalivarapu
+- **Dot Number**: Kalivarapu.2
+- **Due Date**: 02/19/2025
 
 ## Assignment Overview
 
@@ -114,8 +114,7 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
-<!-- TODO: briefly argue your choice of design or design something
-new; then delete this comment -->
+Out of the three concepts I brainstormed, I am leaning towards the TaskManager component, for two main reasons. The first reason is after viewing the comments left on the Component Brainstorming activity, I realized that the RegExpMatcher idea will be quite time-consuming and trivial to implement, leaving the Graph and TaskManager ideas. This leads to my second reason, which was that out of the two options left, the TaskManager component seemed to be more interesting and unique (in other words, "cooler"). Additionally, I believe that TaskManager would seem more impressive on resumes, obviously depending on how we explain it (please tell me if I am wrong!)
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
