@@ -11,7 +11,7 @@ import components.standard.Standard;
  *   this = {}
  * </pre>
  */
-public interface TaskManagerKernel extends Standard<TaskManagerComp2> {
+public interface TaskManagerKernel extends Standard<TaskManager> {
 
     /**
      * Nested Task interface representing a single task.
