@@ -13,7 +13,6 @@ the following form: YYYY.0M.0D.
 - Designed a Graph component
 - Designed a RegExpMatcher component
 - Designed a TaskManager component
-- Designed a TaskManager component
 
 ## 2025.02.20
 
@@ -30,4 +29,4 @@ the following form: YYYY.0M.0D.
 ### Added
 
 - Designed kernel and enhanced interfaces for TaskManager component
->>>>>>> Stashed changes
+
