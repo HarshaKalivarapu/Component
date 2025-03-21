@@ -23,3 +23,10 @@ the following form: YYYY.0M.0D.
 ### Updated
 
 - Changed design to include a Task subclass (gives ability to create an individual task), constructor (initializes a Map and Sequence to keep track of all tasks), and four kernel methods (addTask, removeTask, isTaskComplete, markTaskComplete). Also included a Main Method to test the code written and ensure accuracy (so far!)
+
+## 2025.03.10
+
+### Added
+
+- Designed kernel and enhanced interfaces for TaskManager component
+
