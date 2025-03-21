@@ -9,7 +9,9 @@ import components.simplewriter.SimpleWriter1L;
  * @author Harsha Kalivarapu
  */
 public class TaskManagerComp2 {
-    // This is an internal Task class to make each task
+    /**
+     * This is an internal Task class to make each task
+     */
     private static class Task {
 
         /**
@@ -126,7 +128,7 @@ public class TaskManagerComp2 {
 
     public static void main(String[] args) {
         SimpleWriter out = new SimpleWriter1L();
-        TaskManager tm = new TaskManager();
+        TaskManagerComp2 tm = new TaskManagerComp2();
 
         // Adding tasks
         tm.addTask("Task1", 5, "02-20-2025");
