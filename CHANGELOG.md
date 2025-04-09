@@ -30,3 +30,14 @@ the following form: YYYY.0M.0D.
 
 - Designed kernel and enhanced interfaces for TaskManager component
 
+## 2025.03.35
+
+### Added
+
+- Designed abstract class for TaskManager component
+
+### Updated
+
+- Changed design to include all the implemented enhanced methods
+
+

@@ -104,9 +104,10 @@ public interface TaskManagerKernel extends Standard<TaskManager> {
      *              the name of the task to be removed
      * @updates this
      * @requires taskName is in this
+     * @return the task removed
      * @ensures this = #this - { (taskName, priority, dueDate, isComplete) }
      */
-    void removeTask(String taskName);
+    Task removeTask(String taskName);
 
     /**
      * Checks if the given task is complete.
