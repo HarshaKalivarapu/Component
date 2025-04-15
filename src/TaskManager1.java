@@ -1,5 +1,3 @@
-import java.lang.reflect.InvocationTargetException;
-
 import components.map.Map;
 import components.map.Map1L;
 
