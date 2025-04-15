@@ -40,4 +40,14 @@ the following form: YYYY.0M.0D.
 
 - Changed design to include all the implemented enhanced methods
 
+## 2025.04.14
+
+### Added
+
+- Designed kernel implementation for TaskManager1 component
+
+### Updated
+
+- Changed design to include the implemented Standard methods, the implemented Task subclass, and the kernel methods using Map1L structure
+
 
